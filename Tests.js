@@ -33,13 +33,13 @@ function sendMessageToBrian(coworkers){
     for(var i =0; i < coworkers.length; i++){
         let coworker = coworkers[i];
 
-        if(member.firstName != "Brian")
+        if(coworker.firstName != "Brian")
             return false;
 
-        if(member.phone == null)
+        if(coworker.phone == null)
             return false;
 
-        smsService.sendSMS(member.phone, 'Brian, please stop!');
+        smsService.sendSMS(coworker.phone, 'Brian, please stop!');
         return true
     }
 }
